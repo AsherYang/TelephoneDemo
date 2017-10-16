@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_dest_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="13553831061"
+        android:hint="@string/please_input_dest_addr" />
+
+    <EditText
+        android:id="@+id/et_input_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1234567"
+        android:hint="@string/please_input_sms" />
+
+    <Button
+        android:id="@+id/btn_sms_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="send" />
+</LinearLayout>
