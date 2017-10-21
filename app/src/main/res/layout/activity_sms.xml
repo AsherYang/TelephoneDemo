@@ -16,7 +16,7 @@
         android:id="@+id/et_input_sms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1234567"
+        android:text="102"
         android:hint="@string/please_input_sms" />
 
     <Button

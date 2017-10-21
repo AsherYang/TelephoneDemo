@@ -6,13 +6,17 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Build;
 import android.os.Bundle;
+import android.telephony.PhoneNumberUtils;
 import android.telephony.SmsManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -64,6 +68,11 @@ public class SmsActivity extends Activity {
             case R.id.btn_sms_send:
                 String destAddr = etDestAddr.getText().toString();
                 String smsMessage = etInputSms.getText().toString();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    String formatNumber = PhoneNumberUtils.formatNumber(destAddr,
+                            Locale.getDefault().getCountry());
+                    Log.d("SmsActivity", "formatNumber = " + formatNumber);
+                }
                 if (TextUtils.isEmpty(destAddr) || TextUtils.isEmpty(smsMessage)) {
                     return;
                 }
@@ -74,7 +83,7 @@ public class SmsActivity extends Activity {
                 // 交付回调Intent， 一般对方接受成功后，会回调该Intent，该Intent回调后，即表明短信对方已接收。
                 PendingIntent deliveryPendingIntent = PendingIntent.getBroadcast(SmsActivity.this, 0, deliveryIntent, PendingIntent.FLAG_CANCEL_CURRENT);
                 smsManager.sendTextMessage(destAddr, null, smsMessage, sendPendingIntent, deliveryPendingIntent);
-                Log.d("SmsActivity", "send->sms");
+                Log.d("SmsActivity", "send->sms， content = " + smsMessage);
                 break;
             default:
                 break;

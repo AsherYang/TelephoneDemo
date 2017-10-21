@@ -27,6 +27,18 @@
         </activity>
 
         <activity android:name=".SmsActivity" />
+
+        <receiver
+            android:name=".SmsMessageReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">>
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
