@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.Locale;
 
@@ -36,6 +37,8 @@ public class SmsActivity extends Activity {
     SmsManager smsManager;
     @BindView(R.id.et_dest_addr)
     EditText etDestAddr;
+    @BindView(R.id.tv_status)
+    TextView tvStatus;
     private final String SEND_SMS_ACTION_REPORT = "SEND_SMS_ACTION_REPORT";
     private final String DELIVERY_SMS_ACTION_REPORT = "DELIVERY_SMS_ACTION_REPORT";
 
@@ -84,6 +87,7 @@ public class SmsActivity extends Activity {
                 PendingIntent deliveryPendingIntent = PendingIntent.getBroadcast(SmsActivity.this, 0, deliveryIntent, PendingIntent.FLAG_CANCEL_CURRENT);
                 smsManager.sendTextMessage(destAddr, null, smsMessage, sendPendingIntent, deliveryPendingIntent);
                 Log.d("SmsActivity", "send->sms， content = " + smsMessage);
+                tvStatus.setText(getString(R.string.state_sending));
                 break;
             default:
                 break;
@@ -100,9 +104,11 @@ public class SmsActivity extends Activity {
             switch (getResultCode()) {
                 case Activity.RESULT_OK:
                     Log.d("SmsActivity", "发送至短信中心成功!");
+                    tvStatus.setText(getString(R.string.state_send_sms_center));
                     break;
                 default:
                     Log.d("SmsActivity", "发送至短信中心失败...");
+                    tvStatus.setText(getString(R.string.state_send_sms_center_fail));
                     break;
             }
         }
@@ -118,9 +124,11 @@ public class SmsActivity extends Activity {
             switch (getResultCode()) {
                 case Activity.RESULT_OK:
                     Log.d("SmsActivity", "短信对方已接收成功!");
+                    tvStatus.setText(getString(R.string.state_send_received));
                     break;
                 default:
                     Log.d("SmsActivity", "对方接收短信失败...");
+                    tvStatus.setText(getString(R.string.state_send_received_fail));
                     break;
             }
         }

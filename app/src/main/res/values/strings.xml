@@ -3,4 +3,10 @@
 
     <string name="please_input_dest_addr">dest address</string>
     <string name="please_input_sms">please input sms message to send.</string>
+
+    <string name="state_sending">正在发送</string>
+    <string name="state_send_sms_center">已发送至短信中心</string>
+    <string name="state_send_sms_center_fail">发送至短信中心失败</string>
+    <string name="state_send_received">对方已接收</string>
+    <string name="state_send_received_fail">对方接收失败</string>
 </resources>
