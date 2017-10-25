@@ -8,9 +8,8 @@
         android:id="@+id/et_dest_addr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:hint="@string/please_input_dest_addr"
-        android:text="13553831061" />
+        android:text="13113238326" />
 
     <EditText
         android:id="@+id/et_input_sms"
