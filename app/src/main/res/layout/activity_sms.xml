@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="@string/please_input_dest_addr"
-        android:text="13113238326" />
+        android:text="13553831061" />
 
     <EditText
         android:id="@+id/et_input_sms"
@@ -18,27 +18,20 @@
         android:layout_height="wrap_content"
         android:hint="@string/please_input_sms"
         android:maxLines="2"
-        android:text="我是长短信，你想干嘛，哈辉大家啊看到大道发生的解放路卡世纪东方克鲁塞德解放啦开始大数据疯狂的撒来看积分卡立即；
-        大房间卡世纪东方释放辣鸡啊少得可怜发；啊速度快解放拉升几点发生看得见风；拉控件大家可令肌肤打开解放东路打赏类及开发了开机阿斯蒂芬打扫房大家看法卡拉胶打开间扩来开京东方叫" />
+        android:text="1233333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:orientation="horizontal">
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorAccent" />
 
-        <Button
-            android:id="@+id/btn_sms_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="send" />
-
-        <TextView
-            android:id="@+id/tv_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:layout_marginLeft="5dp"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/btn_sms_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="send" />
 
 </LinearLayout>
