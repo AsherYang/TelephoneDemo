@@ -9,15 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/please_input_dest_addr"
-        android:text="13113238326" />
+        android:text="10010" />
 
+    <!--超长短信后同居的时候你就能不能给予我们自己知道自己要的时候就能和她一起讨厌的就是一个人都能用一块石头落于美丽的地方新闻发布会在贵阳举办过奥运会哈哈哈-->
+    <!--10010  102,  10086 101-->
     <EditText
         android:id="@+id/et_input_sms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/please_input_sms"
         android:maxLines="2"
-        android:text="1233333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333334" />
+        android:text="102" />
 
     <TextView
         android:id="@+id/tv_status"
