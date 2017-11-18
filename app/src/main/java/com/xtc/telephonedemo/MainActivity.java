@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 showMsgDialog(position);
             }
         });
-        startSmsActivity();
+//        startSmsActivity();
     }
 
     private void startSmsActivity() {
