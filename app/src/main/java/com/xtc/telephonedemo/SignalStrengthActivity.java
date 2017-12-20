@@ -67,14 +67,14 @@ public class SignalStrengthActivity extends Activity {
 
         tvCurrentDataNwMode.setText(ConvertMsgUtil.convertNetworkType(mTelephonyManager.getDataNetworkType()));
         tvCurrentVoiceNwMode.setText(ConvertMsgUtil.convertNetworkType(mTelephonyManager.getVoiceNetworkType()));
-        String imsReg = "isVolteAvailable = " + String.valueOf(isVolteAvailable()) + " , isImsRegistered = " + String.valueOf(isImsRegistered());
+        String imsReg = "isVolteAvailable = " + String.valueOf(isVolteAvailable()) + " \n isImsRegistered = " + String.valueOf(isImsRegistered());
         tvImsRegState.setText(imsReg);
         String ss2G = "gsm SS = " + String.valueOf(signalStrength.getGsmSignalStrength())
-                + " level = " + ConvertMsgUtil.convertSsLevel(getGsmLevel(signalStrength))
-                + " cdma level = " + ConvertMsgUtil.convertSsLevel(getCdmaLevel(signalStrength));
+                + " \n level = " + ConvertMsgUtil.convertSsLevel(getGsmLevel(signalStrength))
+                + " \n cdma level = " + ConvertMsgUtil.convertSsLevel(getCdmaLevel(signalStrength));
         tv2gSs.setText(ss2G);
         String ss4G = "lte SS = " + String.valueOf(getLteSignalStrength(signalStrength))
-                + " level = " + ConvertMsgUtil.convertSsLevel(getLteLevel(signalStrength));
+                + " \n level = " + ConvertMsgUtil.convertSsLevel(getLteLevel(signalStrength));
         tv4gSs.setText(ss4G);
     }
 
