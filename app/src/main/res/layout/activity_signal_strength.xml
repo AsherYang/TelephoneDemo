@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_current_data_nw_mode_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_data_nw_mode" />
+
+            <TextView
+                android:id="@+id/tv_current_data_nw_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/tv_current_data_nw_mode_tip"
+                android:layout_toRightOf="@id/tv_current_data_nw_mode_tip" />
+
+            <TextView
+                android:id="@+id/tv_current_voice_nw_mode_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_current_data_nw_mode_tip"
+                android:text="@string/current_voice_nw_mode" />
+
+            <TextView
+                android:id="@+id/tv_current_voice_nw_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_current_data_nw_mode"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/tv_current_voice_nw_mode_tip"
+                android:layout_toRightOf="@id/tv_current_voice_nw_mode_tip" />
+
+            <TextView
+                android:id="@+id/tv_ims_reg_state_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_current_voice_nw_mode_tip"
+                android:text="@string/ims_reg_state" />
+
+            <TextView
+                android:id="@+id/tv_ims_reg_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_current_voice_nw_mode"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/tv_ims_reg_state_tip"
+                android:layout_toRightOf="@id/tv_ims_reg_state_tip" />
+
+            <TextView
+                android:id="@+id/tv_2g_ss_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_ims_reg_state_tip"
+                android:text="@string/ss_2g" />
+
+            <TextView
+                android:id="@+id/tv_2g_ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_ims_reg_state"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/tv_2g_ss_tip"
+                android:layout_toRightOf="@id/tv_2g_ss_tip" />
+
+            <TextView
+                android:id="@+id/tv_4g_ss_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_2g_ss_tip"
+                android:text="@string/ss_4g" />
+
+            <TextView
+                android:id="@+id/tv_4g_ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_2g_ss"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@id/tv_4g_ss_tip"
+                android:layout_toRightOf="@id/tv_4g_ss_tip" />
+        </RelativeLayout>
+    </HorizontalScrollView>
+</ScrollView>

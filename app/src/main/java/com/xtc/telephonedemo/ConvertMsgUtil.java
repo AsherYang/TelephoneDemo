@@ -150,4 +150,29 @@ public class ConvertMsgUtil {
                 return "Unknown";
         }
     }
+
+    // convert signalStrength level
+    /*
+    public static final int SIGNAL_STRENGTH_NONE_OR_UNKNOWN = 0;
+    public static final int SIGNAL_STRENGTH_POOR = 1;
+    public static final int SIGNAL_STRENGTH_MODERATE = 2;
+    public static final int SIGNAL_STRENGTH_GOOD = 3;
+    public static final int SIGNAL_STRENGTH_GREAT = 4;
+     */
+    public static String convertSsLevel(int level) {
+        switch (level) {
+            case 0:
+                return "SIGNAL_STRENGTH_NONE_OR_UNKNOWN";
+            case 1:
+                return "SIGNAL_STRENGTH_POOR";
+            case 2:
+                return "SIGNAL_STRENGTH_MODERATE";
+            case 3:
+                return "SIGNAL_STRENGTH_GOOD";
+            case 4:
+                return "SIGNAL_STRENGTH_GREAT";
+            default:
+                return "SIGNAL_STRENGTH_NONE_OR_UNKNOWN";
+        }
+    }
 }

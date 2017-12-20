@@ -9,4 +9,10 @@
     <string name="state_send_sms_center_fail">发送至短信中心失败</string>
     <string name="state_send_received">对方已接收</string>
     <string name="state_send_received_fail">对方接收失败</string>
+
+    <string name="current_data_nw_mode">当前数据网络模式：</string>
+    <string name="current_voice_nw_mode">当前语音网络模式：</string>
+    <string name="ims_reg_state">IMS注册状态：</string>
+    <string name="ss_2g">2G 信号强度：</string>
+    <string name="ss_4g">4G 信号强度：</string>
 </resources>

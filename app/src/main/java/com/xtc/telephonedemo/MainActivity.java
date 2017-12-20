@@ -48,10 +48,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //        startSmsActivity();
+        startSignalStrengthActivity();
     }
 
     private void startSmsActivity() {
         Intent intent = new Intent(this, SmsActivity.class);
+        startActivity(intent);
+    }
+
+    private void startSignalStrengthActivity() {
+        Intent intent = new Intent(this, SignalStrengthActivity.class);
         startActivity(intent);
     }
 
