@@ -32,7 +32,7 @@
                 android:id="@+id/tv_current_voice_nw_mode_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_current_data_nw_mode_tip"
+                android:layout_below="@id/tv_current_data_nw_mode"
                 android:text="@string/current_voice_nw_mode" />
 
             <TextView
@@ -49,7 +49,7 @@
                 android:id="@+id/tv_ims_reg_state_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_current_voice_nw_mode_tip"
+                android:layout_below="@id/tv_current_voice_nw_mode"
                 android:text="@string/ims_reg_state" />
 
             <TextView
@@ -66,7 +66,7 @@
                 android:id="@+id/tv_2g_ss_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_ims_reg_state_tip"
+                android:layout_below="@id/tv_ims_reg_state"
                 android:text="@string/ss_2g" />
 
             <TextView
@@ -83,7 +83,7 @@
                 android:id="@+id/tv_4g_ss_tip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_2g_ss_tip"
+                android:layout_below="@id/tv_2g_ss"
                 android:text="@string/ss_4g" />
 
             <TextView
