@@ -1,7 +1,6 @@
 package com.xtc.telephonedemo;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.SignalStrength;
@@ -67,14 +66,14 @@ public class SignalStrengthActivity extends Activity {
 
         tvCurrentDataNwMode.setText(ConvertMsgUtil.convertNetworkType(mTelephonyManager.getDataNetworkType()));
         tvCurrentVoiceNwMode.setText(ConvertMsgUtil.convertNetworkType(mTelephonyManager.getVoiceNetworkType()));
-        String imsReg = "isVolteAvailable = " + String.valueOf(isVolteAvailable()) + " \n isImsRegistered = " + String.valueOf(isImsRegistered());
+        String imsReg = "isVolteAvailable = " + String.valueOf(isVolteAvailable()) + "\nisImsRegistered = " + String.valueOf(isImsRegistered());
         tvImsRegState.setText(imsReg);
         String ss2G = "gsm SS = " + String.valueOf(signalStrength.getGsmSignalStrength())
-                + " \n level = " + ConvertMsgUtil.convertSsLevel(getGsmLevel(signalStrength))
-                + " \n cdma level = " + ConvertMsgUtil.convertSsLevel(getCdmaLevel(signalStrength));
+                + "\nlevel = " + ConvertMsgUtil.convertSsLevel(getGsmLevel(signalStrength))
+                + "\ncdma level = " + ConvertMsgUtil.convertSsLevel(getCdmaLevel(signalStrength));
         tv2gSs.setText(ss2G);
         String ss4G = "lte SS = " + String.valueOf(getLteSignalStrength(signalStrength))
-                + " \n level = " + ConvertMsgUtil.convertSsLevel(getLteLevel(signalStrength));
+                + "\nlevel = " + ConvertMsgUtil.convertSsLevel(getLteLevel(signalStrength));
         tv4gSs.setText(ss4G);
     }
 
